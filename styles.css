@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&display=swap');
+
+:root{
+    --ff-roboto: "Roboto", sans-serif;
+    --ff-open-sans: "Open Sans", sans-serif;
+    --ff-cormorant: "Cormorant SC", serif;
+
+    --clr-grey-light: rgba(241, 245, 248, 1);
+    --clr-grey-dark: rgba(84, 84, 84, 1);
+
+    --btn-secondary: rgba(214, 103, 177, 1);
+
+    --transition: all 0.3s linear;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: var(--ff-open-sans);
+    background: var(--clr-grey-light);
+    color: var(--clr-grey-dark);
+    font-size: 0.875rem;
+}
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4{
+    letter-spacing: 0.25rem;
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: var(--ff-roboto);
+}
+
+h1{
+    font-size: 3rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: var(--clr-grey-light);
+}
+.section {
+    padding-bottom: 5rem;
+}
+
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.btn{
+    text-transform: uppercase;
+    background: transparent;
+    color: black;
+    padding: 0.375rem 0.375rem;
+    display: inline-block;
+    font-size: 0.875rem;
+    border: 2px solid black;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(84, 84, 84, 0.2);
+    border-radius: 1.5px;
+}
+
+.btn-white{
+    color: white;
+    border-color: white;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.btn-white:hover {
+    background: white;
+    color: var(--btn-secondary);
+  }
+
+
+/* NAVBAR */
+
+nav{
+    background: white;
+    padding: 1rem 1.5rem;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-header a{
+    font-family: var(--ff-cormorant);
+    font-size: 2.5rem;
+    color: var(--clr-grey-dark);
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-toggle {
+    font-size: 1.5rem;
+    color: var(--clr-grey-1);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    margin-left: auto;
+    padding-right: 3rem;
+}
+
+.nav-toggle:hover {
+  color: var(--btn-secondary);
+}
+
+.links-right a, .links-left a{
+    background: white;
+    color: var(--clr-grey-dark);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    display: block;
+    font-weight: lighter;
+    padding: 0;
+    margin: 0 1rem;
+    font-family: var(--ff-open-sans);
+}
+
+.links-right, .links-left{
+    display: none;
+}
+
+
+@media screen and (min-width: 900px){
+    .nav-center{ 
+        width: 90vw;
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .links-right, .links-left{
+        display: flex;
+    }
+
+    .nav-toggle{
+        display: none;
+    }
+
+}
+
+header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(227, 113, 189, 0.5), rgba(0, 0, 0, 0.7)),
+      url(img/hero.jpg) center/cover no-repeat;
+
+}
+
+.banner{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.container h1{
+    color: white;
+    font-family: var(--ff-cormorant);
+    font-weight: lighter;
+    font-size: 3.5rem;
+    transition: var(--transition);
+}
+
+.container p{
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+    .container p {
+      max-width: 40rem;
+    }
+
+    .container h1{
+        color: white;
+        font-family: var(--ff-cormorant);
+        font-weight: lighter;
+        font-size: 5rem;
+    }
+  }
+
+  .title h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 3rem;
+      font-family: var(--ff-cormorant);
+  }
+
+  .title span {
+    color: var(--btn-secondary);
+  }
+
+  .article-body{
+      padding: 2rem 1.5rem;
+  }
+
+#about,
+#products,
+#contact {
+  height: 60vh;
+}
+#products {
+  background: white;
+}
+
+footer {
+    background: var(--clr-grey-dark);
+    padding: 5rem 1rem;
+  }
+  footer p {
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    margin-bottom: 0;
+  }
+  
